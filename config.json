@@ -1,0 +1,13 @@
+{
+
+  "launcher": [
+    {
+      "launcher_version": "2.0",
+      "server_name": "mineloot",
+      "mods_1": "mods_mineloot.json",
+      "mods_2": "mods_bloodloot.json",
+      "game_version": "1.18.2",
+      "forge_version": "1.18.2-40.2.1"
+    }
+  ]
+}

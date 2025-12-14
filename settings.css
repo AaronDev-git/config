@@ -1,0 +1,117 @@
+body {
+    background-image: url('../images/background2.png');
+    background-size: cover;       /* l'image couvre tout l'écran */
+    background-position: center;  /* centrée */
+    background-repeat: no-repeat; /* pas de répétition */
+
+    background-color: #0b1a2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.setting label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Custom select */
+.custom-select {
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-select .selected {
+    background-color: #1f2a44;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+}
+
+.custom-select .selected:hover {
+    background-color: #293753;
+}
+
+.custom-select .options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1f2a44;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+
+    /* --- Ajout scroll interne --- */
+    max-height: 200px;      /* limite visible */
+    overflow-y: auto;       /* permet le scroll vertical */
+    overflow-x: hidden;     /* pas de scroll horizontal */
+    scrollbar-width: thin;  /* scrollbar fine (Firefox) */
+}
+
+/* Scrollbar custom (Chrome, Edge, Safari) */
+.custom-select .options::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-select .options::-webkit-scrollbar-track {
+    background: #1f2a44;
+    border-radius: 8px;
+}
+.custom-select .options::-webkit-scrollbar-thumb {
+    background: #293753;
+    border-radius: 8px;
+}
+
+.custom-select .options li {
+    padding: 10px;
+    transition: background 0.2s;
+}
+
+.custom-select .options li:hover {
+    background-color: #293753;
+}
+
+/* Bouton en bas à droite */
+#save-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1f78d1;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#save-btn:hover {
+    background-color: #145ca8;
+}
+
+#save-btn:active {
+    transform: scale(0.97);
+}

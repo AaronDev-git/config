@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="home.css">
-    <script src="https://aarondev-git.github.io/config/home.js"></script>
+    <script src="https://aarondev-git.github.io/config/home.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -23,10 +23,10 @@
         <div class="bg current" style="background-image: url('https://aarondev-git.github.io/config/background.png');"></div>
         <div class="bg next"></div>
         <div id="playContainer">
-            <label onclick="if(window.javaApp) window.javaApp.setLow();" style="cursor: pointer;">
-                <input type="checkbox" id="lowPerfCheckbox">
+            <button id="lowPerfButton" class="low-perf-button">
+                <span class="checkbox-icon">☐</span>
                 PC moins performant
-            </label>
+            </button>
             <button id="play" class="play-button">Jouer</button>
         </div>
     </div>

@@ -1,4 +1,5 @@
 function init() {
+    alert("home.js chargé");
     const current = document.querySelector('.bg.current');
     const next = document.querySelector('.bg.next');
     
@@ -38,6 +39,21 @@ function init() {
         if (window.javaApp) window.javaApp.logOut();
     });
     
-    // Note : La checkbox est gérée directement dans le HTML avec onclick
+    // Bouton low performance
+    const lowPerfButton = document.getElementById('lowPerfButton');
+    if (lowPerfButton) {
+        lowPerfButton.addEventListener('click', function() {
+        
+            this.classList.toggle('active');
+            const icon = this.querySelector('.checkbox-icon');
+            if (this.classList.contains('active')) {
+                icon.textContent = '☑'; // 
+            } else {
+                icon.textContent = '☐';
+            }
+            
+            if (window.javaApp) window.javaApp.setLow();
+        });
+    }
 }
 window.onload = init;

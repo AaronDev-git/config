@@ -14,12 +14,12 @@ function init() {
     
     // Boutons de navigation
     document.getElementById('mineloot')?.addEventListener('click', function() {
-        changeBackground('../images/background.png');
+        changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setMineloot();
     });
     
     document.getElementById('bloodloot')?.addEventListener('click', function() {
-        changeBackground('../images/background2.png');
+        changeBackground('https://aarondev-git.github.io/config/background2.png');
         if (window.javaApp) window.javaApp.setBloodloot();
     });
     
@@ -56,4 +56,5 @@ function init() {
         });
     }
 }
+
 window.onload = init;

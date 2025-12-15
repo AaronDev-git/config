@@ -41,11 +41,12 @@ function init() {
     // AJOUT : Checkbox pour les performances
     const lowPerfCheckbox = document.getElementById('lowPerfCheckbox');
     if (lowPerfCheckbox) {
-        lowPerfCheckbox.addEventListener('change', function() {
+        lowPerfCheckbox.addEventListener('click', function() {
             if (window.javaApp) window.javaApp.setLow();
         });
     }
 }
 
 window.onload = init;
+
 

@@ -38,12 +38,13 @@ function init() {
         if (window.javaApp) window.javaApp.logOut();
     });
 
-    document.getElementById('lowPerfCheckBox')?.addEventListener('click', function() {
+    document.getElementById('lowPerfCheckbox')?.addEventListener('click', function() {
         if (window.javaApp) window.javaApp.setLow();
     });
 }
 
 window.onload = init;
+
 
 
 

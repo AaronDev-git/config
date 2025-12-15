@@ -42,10 +42,10 @@ function init() {
     const lowPerfCheckbox = document.getElementById('lowPerfCheckbox');
     if (lowPerfCheckbox) {
         lowPerfCheckbox.addEventListener('change', function() {
-            console.log('Checkbox changed:', this.checked);
             if (window.javaApp) window.javaApp.setLow();
         });
     }
 }
 
 window.onload = init;
+

@@ -76,6 +76,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 .bg.current {
@@ -128,4 +129,3 @@ body {
 .play-button:hover {
     background-color: #ff1c1c;
 }
-

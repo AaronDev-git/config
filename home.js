@@ -1,5 +1,4 @@
 function init() {
-    alert("home.js chargé");
     const current = document.querySelector('.bg.current');
     const next = document.querySelector('.bg.next');
     
@@ -58,3 +57,4 @@ function init() {
 }
 
 window.onload = init;
+

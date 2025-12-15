@@ -37,14 +37,7 @@ function init() {
     document.getElementById('logout')?.addEventListener('click', function() {
         if (window.javaApp) window.javaApp.logOut();
     });
-
-    document.getElementById('lowPerfCheckbox')?.addEventListener('click', function() {
-        if (window.javaApp) window.javaApp.setLow();
-    });
+    
+    // Note : La checkbox est gérée directement dans le HTML avec onclick
 }
-
 window.onload = init;
-
-
-
-

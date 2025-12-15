@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="https://aarondev-git.github.io/config/home.css">
+    <link rel="stylesheet" href="home.css">
     <script src="https://aarondev-git.github.io/config/home.js"></script>
 </head>
 <body>
@@ -19,17 +19,14 @@
             <button id="logout">Déconnexion</button>
         </div>
     </div>
-
     <div class="main">
         <div class="bg current" style="background-image: url('https://aarondev-git.github.io/config/background.png');"></div>
         <div class="bg next"></div>
-
         <div id="playContainer">
-            <label>
+            <label onclick="if(window.javaApp) window.javaApp.setLow();" style="cursor: pointer;">
                 <input type="checkbox" id="lowPerfCheckbox">
                 PC moins performant
             </label>
-
             <button id="play" class="play-button">Jouer</button>
         </div>
     </div>

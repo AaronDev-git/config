@@ -37,16 +37,13 @@ function init() {
     document.getElementById('logout')?.addEventListener('click', function() {
         if (window.javaApp) window.javaApp.logOut();
     });
-    
-    // AJOUT : Checkbox pour les performances
-    const lowPerfCheckbox = document.getElementById('lowPerfCheckbox');
-    if (lowPerfCheckbox) {
-        lowPerfCheckbox.addEventListener('click', function() {
-            if (window.javaApp) window.javaApp.setLow();
-        });
-    }
+
+    document.getElementById('lowPerfCheckBox')?.addEventListener('click', function() {
+        if (window.javaApp) window.javaApp.setLow();
+    });
 }
 
 window.onload = init;
+
 
 

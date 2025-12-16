@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/background2.png');
+    background-image: url('https://aarondev-git.github.io/config/background2.html');
     background-size: cover;       /* l'image couvre tout l'écran */
     background-position: center;  /* centrée */
     background-repeat: no-repeat; /* pas de répétition */
@@ -115,3 +115,4 @@ body {
 #save-btn:active {
     transform: scale(0.97);
 }
+

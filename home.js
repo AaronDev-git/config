@@ -11,7 +11,6 @@ function init() {
         }, 500);
     }
     
-    // Boutons de navigation
     document.getElementById('mineloot')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setMineloot();
@@ -38,7 +37,6 @@ function init() {
         if (window.javaApp) window.javaApp.logOut();
     });
     
-    // Bouton low performance
     const lowPerfButton = document.getElementById('lowPerfButton');
     if (lowPerfButton) {
         lowPerfButton.addEventListener('click', function() {
@@ -57,3 +55,4 @@ function init() {
 }
 
 window.onload = init;
+

@@ -1,8 +1,8 @@
 body {
     background-image: url('https://aarondev-git.github.io/config/background2.png');
-    background-size: cover;       /* l'image couvre tout l'écran */
-    background-position: center;  /* centrée */
-    background-repeat: no-repeat; /* pas de répétition */
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
 
     background-color: #0b1a2f;
     display: flex;
@@ -28,7 +28,6 @@ body {
     font-size: 16px;
 }
 
-/* Custom select */
 .custom-select {
     position: relative;
     width: 150px;
@@ -62,11 +61,9 @@ body {
     list-style: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 10;
-
-    /* --- Ajout scroll interne --- */
-    max-height: 200px;      /* limite visible */
-    overflow-y: auto;       /* permet le scroll vertical */
-    overflow-x: hidden;     /* pas de scroll horizontal */
+    max-height: 200px;     
+    overflow-y: auto;       
+    overflow-x: hidden;   
     scrollbar-width: thin;  /* scrollbar fine (Firefox) */
 }
 
@@ -92,7 +89,6 @@ body {
     background-color: #293753;
 }
 
-/* Bouton en bas à droite */
 #save-btn {
     position: fixed;
     bottom: 20px;
@@ -115,5 +111,6 @@ body {
 #save-btn:active {
     transform: scale(0.97);
 }
+
 
 

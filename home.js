@@ -13,7 +13,7 @@ function init() {
     
     // Boutons de navigation
     document.getElementById('mineloot')?.addEventListener('click', function() {
-        changeBackground('https://aarondev-git.github.io/config/servers.png');
+        changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setMineloot();
     });
     
@@ -55,4 +55,5 @@ function init() {
         });
     }
 }
+
 window.onload = init;

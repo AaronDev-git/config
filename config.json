@@ -15,8 +15,10 @@
       "settings": "https://aarondev-git.github.io/config/settings.html",
       "login": "https://aarondev-git.github.io/config/login.html",
       "icon": "https://aarondev-git.github.io/config/icon.png",
-      "icon2": "https://aarondev-git.github.io/config/icon_down.png"
+      "icon2": "https://aarondev-git.github.io/config/icon_down.png",
+      "minestrator": "https://minestrator.com/a/VYSHAFT"
     }
   ]
 
 }
+

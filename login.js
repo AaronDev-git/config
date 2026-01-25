@@ -2,10 +2,18 @@
 function init() {
     if (window.javaApp) {
 
-        document.getElementById('microsoft').addEventListener('click', function() {
-            window.javaApp.authenticateMS();
+         let firstClick = true;
+        const msBtn = document.getElementById('microsoft');
 
+        msBtn.addEventListener('click', function () {
+            if (firstClick) {
+                firstClick = false;
+                window.javaApp.authenticateMS();
+            } else {
+                window.javaApp.openURL();
+            }
         });
+
     } else {
         console.error("L'objet Java n'est pas disponible.");
     }
@@ -17,3 +25,4 @@ function init() {
 }
 
 window.onload = init;
+

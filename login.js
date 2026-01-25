@@ -2,15 +2,19 @@
 function init() {
     if (window.javaApp) {
 
-         let firstClick = true;
         const msBtn = document.getElementById('microsoft');
+        let authStartTime = null;
+        const AUTH_DURATION = 60000; 
 
         msBtn.addEventListener('click', function () {
-            if (firstClick) {
-                firstClick = false;
+            const now = Date.now();
+
+            if (authStartTime === null || (now - authStartTime) > AUTH_DURATION) {
+                authStartTime = now;
                 window.javaApp.authenticateMS();
-            } else {
-                window.javaApp.openURL();
+            } 
+            else {
+                window.javaApp.example();
             }
         });
 
@@ -25,4 +29,5 @@ function init() {
 }
 
 window.onload = init;
+
 

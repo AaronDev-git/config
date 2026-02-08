@@ -14,7 +14,7 @@
       "home": "https://aarondev-git.github.io/config/home.html",
       "settings": "https://aarondev-git.github.io/config/settings.html",
       "login": "https://aarondev-git.github.io/config/login.html",
-      "icon": "https://aarondev-git.github.io/config/icon.png",
+      "icon": "https://aarondev-git.github.io/config/servers.png",
       "icon2": "https://aarondev-git.github.io/config/icon_down.png",
       "minestrator": "https://minestrator.com/a/VYSHAFT",
       "mod_conf": "https://github.com/AaronDev-git/config/releases/download/v1.0/config.zip"
@@ -22,5 +22,6 @@
   ]
 
 }
+
 
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Nos Sponsors & Communauté Officielle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 28px;
+    font-weight: bold;
+    background: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 100px);
+}
+
+/* Section Discord */
+.section.discord {
+    flex: 1;
+    background-color: #5865F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Carte style Discord embed */
+.discord-card {
+    background-color: #36393f;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.discord-card img.banner {
+    width: 100%;
+    display: block;
+    height: 150px;
+    object-fit: cover;
+}
+
+.discord-card .content {
+    padding: 15px;
+}
+
+.discord-card .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-top: -40px;
+    border: 3px solid white;
+    background: #fff;
+}
+
+.discord-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discord-card p {
+    font-size: 14px;
+    color: #b9bbbe;
+    margin-bottom: 15px;
+}
+
+.discord-card .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    background-color: #404eed;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.discord-card .btn:hover {
+    background-color: #4752c4;
+}
+
+.discord-card .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #b9bbbe;
+    margin-top: 10px;
+}
+
+/* Section Minestrator */
+.section.minestrator {
+    flex: 1;
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.section.minestrator img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.section.minestrator h3 {
+    margin-bottom: 15px;
+}
+
+.section.minestrator p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.section.minestrator .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00a86b;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.section.minestrator .btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .section {
+        width: 100%;
+        min-height: 400px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+🚀 Nos Sponsors & Communauté Officielle
+</header>
+
+<div class="container">
+
+    <!-- Section Discord -->
+    <div class="section discord">
+        <div class="discord-card">
+            <img src="https://aarondev-git.github.io/config/ds_banner.png" alt="Banner" class="banner">
+            <div class="content">
+                <img src="https://aarondev-git.github.io/config/logo_ds.png" alt="Logo Discord" class="logo">
+                <h3>MineMarket</h3>
+                <p>Bienvenue sur notre serveur ! Vous souhaitez commander un plugin/launcher ? Vous êtes au bon endroit !</p>
+                <a href="https://discord.gg/3mkpKsSrsT" target="_blank" class="btn">Rejoindre le serveur</a>
+                <div class="stats">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Minestrator -->
+    <div class="section minestrator">
+        <img src="https://aarondev-git.github.io/config/minestrator.png" alt="Logo Minestrator">
+        <h3>Hébergement par Minestrator</h3>
+        <p>Découvrez nos services d’hébergement Minecraft fiables et rapides.</p>
+        <a href="https://minestrator.com" target="_blank" class="btn">Visiter Minestrator</a>
+    </div>
+
+</div>
+
+</body>
+</html>

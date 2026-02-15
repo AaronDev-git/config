@@ -27,7 +27,6 @@ header {
     height: calc(100vh - 100px);
 }
 
-/* Section Discord */
 .section.discord {
     flex: 1;
     background-color: #5865F2;
@@ -95,7 +94,6 @@ header {
     background-color: #4752c4;
 }
 
-/* Section Minestrator */
 .section.minestrator {
     flex: 1;
     background-color: #2c2c2c;
@@ -138,6 +136,26 @@ header {
     transform: scale(1.05);
 }
 
+.return-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 22px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.return-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
 @media(max-width: 768px) {
     .container {
         flex-direction: column;
@@ -158,7 +176,6 @@ header {
 
 <div class="container">
 
-    <!-- Section Discord -->
     <div class="section discord">
         <div class="discord-card">
             <img src="https://aarondev-git.github.io/config/ds_banner.png" alt="Banner" class="banner">
@@ -166,15 +183,11 @@ header {
                 <img src="https://aarondev-git.github.io/config/logo_ds.png" alt="Logo Discord" class="logo">
                 <h3>MineMarket</h3>
                 <p>Bienvenue sur notre serveur ! Vous souhaitez commander un plugin/launcher ? Vous êtes au bon endroit !</p>
-
-                <!-- BOUTON MODIFIÉ -->
                 <a id="discordBtn" class="btn">Rejoindre le serveur</a>
-
             </div>
         </div>
     </div>
 
-    <!-- Section Minestrator -->
     <div class="section minestrator">
         <img src="https://aarondev-git.github.io/config/minestrator.png" alt="Logo Minestrator">
         <h3>Hébergement par Minestrator</h3>
@@ -184,7 +197,8 @@ header {
 
 </div>
 
-<!-- SCRIPT INTÉGRÉ -->
+<button id="returnBtn" class="return-btn">← Retour</button>
+
 <script>
 window.onload = function() {
 
@@ -192,7 +206,7 @@ window.onload = function() {
     if (discordBtn) {
         discordBtn.addEventListener("click", function() {
             if (window.javaApp) {
-                window.javaApp.openDiscord("https://discord.gg/3mkpKsSrsT");
+                window.javaApp.openURL("https://discord.gg/3mkpKsSrsT");
             }
         });
     }
@@ -201,7 +215,16 @@ window.onload = function() {
     if (minestratorBtn) {
         minestratorBtn.addEventListener("click", function() {
             if (window.javaApp) {
-                window.javaApp.openMineStrator();
+                window.javaApp.openURL("https://minestrator.com/a/VYSHAFT");
+            }
+        });
+    }
+
+    const returnBtn = document.getElementById("returnBtn");
+    if (returnBtn) {
+        returnBtn.addEventListener("click", function() {
+            if (window.javaApp) {
+                window.javaApp.returnHome();
             }
         });
     }

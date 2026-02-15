@@ -52,5 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+    document.getElementById('logout')?.addEventListener('click', function() {
+            if (window.javaApp) window.javaApp.logOut();
+        });
 });
-

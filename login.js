@@ -1,33 +1,37 @@
-
 function init() {
-    if (window.javaApp) {
+    const msBtn = document.getElementById('microsoft');
+    const redBoxLink = document.getElementById('red-box-link');
 
-        const msBtn = document.getElementById('microsoft');
-        let authStartTime = null;
-        const AUTH_DURATION = 60000; 
+    let firstClick = true;
+    let authStartTime = null;
+    const AUTH_DURATION = 60_000;
 
-        msBtn.addEventListener('click', function () {
-            const now = Date.now();
+    msBtn?.addEventListener('click', function (e) {
+        e.preventDefault();
 
-            if (authStartTime === null || (now - authStartTime) > AUTH_DURATION) {
-                authStartTime = now;
-                window.javaApp.authenticateMS();
-            } 
-            else {
-                window.javaApp.example();
-            }
-        });
+        const now = Date.now();
 
-    } else {
-        console.error("L'objet Java n'est pas disponible.");
-    }
+        if (firstClick || authStartTime === null || (now - authStartTime) > AUTH_DURATION) {
+            firstClick = false;
+            authStartTime = now;
+            window.javaApp?.authenticateMS();
+        } else {
+            window.javaApp?.openURL();
+        }
+    });
 
-     const emailInput = document.getElementById('email');
-     emailInput.addEventListener('input', function() {
-         emailInput.value = "Non disponible pour le moment";
-     });
+    redBoxLink?.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.javaApp?.openMinecraftWeb();
+    });
 }
 
-window.onload = init;
+function waitForJavaApp() {
+    if (!window.javaApp) {
+        setTimeout(waitForJavaApp, 50);
+        return;
+    }
+    init();
+}
 
-
+window.addEventListener('load', waitForJavaApp);

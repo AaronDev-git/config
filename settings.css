@@ -1,7 +1,12 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/Minecraft.ttf") format("truetype");
+}
+
 body {
     background-image: url('https://aarondev-git.github.io/config/background2.png');
-    background-size: cover;      
-    background-position: center;  
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 
     background-color: #0b1a2f;
@@ -35,6 +40,10 @@ body {
     user-select: none;
 }
 
+.custom-select:hover {
+    transform: scale(1.03);
+}
+
 .custom-select .selected {
     background-color: #1f2a44;
     color: white;
@@ -61,13 +70,12 @@ body {
     list-style: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 10;
-    max-height: 200px;     
-    overflow-y: auto;       
-    overflow-x: hidden;   
-    scrollbar-width: thin;  /* scrollbar fine (Firefox) */
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
 }
 
-/* Scrollbar custom (Chrome, Edge, Safari) */
 .custom-select .options::-webkit-scrollbar {
     width: 6px;
 }
@@ -90,11 +98,12 @@ body {
 }
 
 #save-btn {
+    font-family: "Minecraft", sans-serif;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #1f78d1;
-    color: white;
+    background-color: #51a866;
+    color: #f9f9f9 ;
     padding: 12px 24px;
     font-size: 16px;
     border: none;
@@ -105,7 +114,7 @@ body {
 }
 
 #save-btn:hover {
-    background-color: #145ca8;
+    transform: scale(1.03);
 }
 
 #save-btn:active {
@@ -113,4 +122,29 @@ body {
 }
 
 
+.icon-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
 
+    background-color: #44445a;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:hover {
+    background-color: #c0392b;
+}
+
+.icon-button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+
+}

@@ -5,21 +5,11 @@
 <title>Nos Sponsors & Communauté Officielle</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    
-html, body {
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; 
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: #111;
     color: white;
-    font-family: 
-        'Segoe UI Emoji', /* Windows */
-        'Apple Color Emoji', /* macOS */
-        'Noto Color Emoji', /* Linux */
-        'Segoe UI', 
-        Arial, 
-        sans-serif;
 }
 
 header {
@@ -34,7 +24,7 @@ header {
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% - 100px); 
+    height: calc(100vh - 100px);
 }
 
 .section.discord {
@@ -210,6 +200,7 @@ header {
 <button id="returnBtn" class="return-btn">← Retour</button>
 
 <script>
+    
 window.onload = function() {
 
     const discordBtn = document.getElementById("discordBtn");
@@ -225,7 +216,7 @@ window.onload = function() {
     if (minestratorBtn) {
         minestratorBtn.addEventListener("click", function() {
             if (window.javaApp) {
-                window.javaApp.openURL("https://minestrator.com/a/VYSHAFT");
+                window.javaApp.openURL("https://minestrator.com");
             }
         });
     }
@@ -244,5 +235,3 @@ window.onload = function() {
 
 </body>
 </html>
-
-

@@ -10,7 +10,6 @@
       "game_version": "1.18.2",
       "forge_version": "1.18.2-40.2.1",
       "shop": "https://google.com",
-      "ip": "hypixel.net",
       "home": "https://aarondev-git.github.io/config/home.html",
       "sponsor": "https://aarondev-git.github.io/config/sponsor.html",
       "settings": "https://aarondev-git.github.io/config/settings.html",
@@ -22,6 +21,7 @@
   ]
 
 }
+
 
 
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Minecraft";
-    src: url("../fonts/Minecraft.ttf") format("truetype");
+    src: url("https://aarondev-git.github.io/config/Minecraft.ttf") format("truetype");
 }
 
 
@@ -17,7 +17,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/login_bg.png');
+    background-image: url('https://aarondev-git.github.io/config/login_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body {
     width: 230px;
     height: 40px;
 
-    background-image: url("../images/microsoft_btn.png");
+    background-image: url("https://aarondev-git.github.io/config/microsoft_btn.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,3 +88,4 @@ body {
     transform: scale(1.05);
     transform: translateY(-10px) scale(1.05);
 }
+

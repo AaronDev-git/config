@@ -37,7 +37,6 @@ header {
     padding: 20px;
 }
 
-/* Carte style Discord embed */
 .discord-card {
     background-color: #36393f;
     border-radius: 12px;
@@ -89,18 +88,11 @@ header {
     border-radius: 6px;
     text-decoration: none;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .discord-card .btn:hover {
     background-color: #4752c4;
-}
-
-.discord-card .stats {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #b9bbbe;
-    margin-top: 10px;
 }
 
 /* Section Minestrator */
@@ -138,6 +130,7 @@ header {
     border-radius: 6px;
     text-decoration: none;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .section.minestrator .btn:hover {
@@ -145,7 +138,6 @@ header {
     transform: scale(1.05);
 }
 
-/* Responsive */
 @media(max-width: 768px) {
     .container {
         flex-direction: column;
@@ -174,9 +166,10 @@ header {
                 <img src="https://aarondev-git.github.io/config/logo_ds.png" alt="Logo Discord" class="logo">
                 <h3>MineMarket</h3>
                 <p>Bienvenue sur notre serveur ! Vous souhaitez commander un plugin/launcher ? Vous êtes au bon endroit !</p>
-                <a href="https://discord.gg/3mkpKsSrsT" target="_blank" class="btn">Rejoindre le serveur</a>
-                <div class="stats">
-                </div>
+
+                <!-- BOUTON MODIFIÉ -->
+                <a id="discordBtn" class="btn">Rejoindre le serveur</a>
+
             </div>
         </div>
     </div>
@@ -186,10 +179,35 @@ header {
         <img src="https://aarondev-git.github.io/config/minestrator.png" alt="Logo Minestrator">
         <h3>Hébergement par Minestrator</h3>
         <p>Découvrez nos services d’hébergement Minecraft fiables et rapides.</p>
-        <a href="https://minestrator.com" target="_blank" class="btn">Visiter Minestrator</a>
+        <a id="minestratorBtn" class="btn">Visiter Minestrator</a>
     </div>
 
 </div>
+
+<!-- SCRIPT INTÉGRÉ -->
+<script>
+window.onload = function() {
+
+    const discordBtn = document.getElementById("discordBtn");
+    if (discordBtn) {
+        discordBtn.addEventListener("click", function() {
+            if (window.javaApp) {
+                window.javaApp.openDiscord("https://discord.gg/3mkpKsSrsT");
+            }
+        });
+    }
+
+    const minestratorBtn = document.getElementById("minestratorBtn");
+    if (minestratorBtn) {
+        minestratorBtn.addEventListener("click", function() {
+            if (window.javaApp) {
+                window.javaApp.openMineStrator();
+            }
+        });
+    }
+
+};
+</script>
 
 </body>
 </html>

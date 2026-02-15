@@ -12,6 +12,7 @@
       "shop": "https://google.com",
       "ip": "hypixel.net",
       "home": "https://aarondev-git.github.io/config/home.html",
+      "sponsor": "https://aarondev-git.github.io/config/sponsor.html",
       "settings": "https://aarondev-git.github.io/config/settings.html",
       "login": "https://aarondev-git.github.io/config/login.html",
       "icon": "https://aarondev-git.github.io/config/servers.png",
@@ -22,6 +23,7 @@
   ]
 
 }
+
 
 
 

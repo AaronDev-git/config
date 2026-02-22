@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Minecraft";
-    src: url("https://aarondev-git.github.io/config/Minecraft.ttf") format("truetype");
+    src: url("https://aarondev-git.github.io/config/minecraft.ttf") format("truetype");
 }
 
 body {
@@ -149,3 +149,4 @@ body {
 
 
 }
+

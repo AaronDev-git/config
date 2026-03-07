@@ -7,8 +7,10 @@
       "mods_ml_2": "https://github.com/AaronDev-git/config/releases/download/v1.0/mods2.json",
       "mods_bl_1": "https://github.com/AaronDev-git/config/releases/download/v1.0/mods.json", 
       "mods_bl_2": "mods_bloodloot.json",
-      "game_version": "1.18.2",
-      "forge_version": "1.18.2-40.2.1",
+      "game_version_vyshaft": "1.20.1",
+      "game_version_hardcored": "1.7.10",
+      "forge_version_vyshaft": "1.20.1-47.4.10",
+      "forge_version_hardcored": "1.7.10-10.13.4.1614",
       "shop": "https://google.com",
       "home": "https://aarondev-git.github.io/config/home.html",
       "sponsor": "https://aarondev-git.github.io/config/sponsor.html",
@@ -21,6 +23,7 @@
   ]
 
 }
+
 
 
 

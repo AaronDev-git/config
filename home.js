@@ -13,12 +13,12 @@ function init() {
 
     document.getElementById('mineloot')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background.png');
-        if (window.javaApp) window.javaApp.setMineloot();
+        if (window.javaApp) window.javaApp.setVyshaft();
     });
 
     document.getElementById('bloodloot')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background2.png');
-        if (window.javaApp) window.javaApp.setBloodloot();
+        if (window.javaApp) window.javaApp.setHardcored();
     });
 
     document.getElementById('play')?.addEventListener('click', function() {
@@ -69,3 +69,4 @@ window.onload = () => {
     init();
     setAvatar();
 }
+

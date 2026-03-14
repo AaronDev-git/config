@@ -5,7 +5,8 @@ const optionsContainer = ramSelect.querySelector(".options");
 ramSelect.value = "";
 
 selected.addEventListener("click", () => {
-    optionsContainer.style.display = optionsContainer.style.display === "block" ? "none" : "block";
+    optionsContainer.style.display =
+        optionsContainer.style.display === "block" ? "none" : "block";
 });
 
 document.addEventListener("click", (e) => {
@@ -43,6 +44,8 @@ function saveRam() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    // SAVE BUTTON
     const saveBtn = document.getElementById("save-btn");
     if (saveBtn) {
         saveBtn.addEventListener("click", () => {
@@ -52,7 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
     document.getElementById('logout')?.addEventListener('click', function() {
-            if (window.javaApp) window.javaApp.logOut();
+        if (window.javaApp) window.javaApp.logOut();
+    });
+
+    const lowPerfButton = document.getElementById('lowPerfButton');
+    if (lowPerfButton) {
+        lowPerfButton.addEventListener('click', function () {
+
+            this.classList.toggle('active');
+
+            const icon = this.querySelector('.checkbox-icon');
+
+            if (this.classList.contains('active')) {
+                icon.textContent = '☑';
+            } else {
+                icon.textContent = '☐';
+            }
+
+            if (window.javaApp) window.javaApp.setLow();
         });
+    }
+
 });

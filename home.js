@@ -13,12 +13,12 @@ function init() {
 
     document.getElementById('mineloot')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background.png');
-        if (window.javaApp) window.javaApp.setVyshaft();
+        if (window.javaApp) window.javaApp.setMineloot();
     });
 
     document.getElementById('bloodloot')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background2.png');
-        if (window.javaApp) window.javaApp.setHardcored();
+        if (window.javaApp) window.javaApp.setBloodloot();
     });
 
     document.getElementById('play')?.addEventListener('click', function() {
@@ -37,21 +37,6 @@ function init() {
             if (window.javaApp) window.javaApp.openMineStrator();
         });
 
-    const lowPerfButton = document.getElementById('lowPerfButton');
-    if (lowPerfButton) {
-        lowPerfButton.addEventListener('click', function() {
-
-            this.classList.toggle('active');
-            const icon = this.querySelector('.checkbox-icon');
-            if (this.classList.contains('active')) {
-                icon.textContent = '☑'; //
-            } else {
-                icon.textContent = '☐';
-            }
-
-            if (window.javaApp) window.javaApp.setLow();
-        });
-    }
 }
 
 function setAvatar() {
@@ -69,4 +54,3 @@ window.onload = () => {
     init();
     setAvatar();
 }
-

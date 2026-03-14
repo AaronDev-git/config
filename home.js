@@ -11,12 +11,12 @@ function init() {
         }, 500);
     }
 
-    document.getElementById('mineloot')?.addEventListener('click', function() {
+    document.getElementById('vyshaft')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setMineloot();
     });
 
-    document.getElementById('bloodloot')?.addEventListener('click', function() {
+    document.getElementById('hardcored')?.addEventListener('click', function() {
         changeBackground('https://aarondev-git.github.io/config/background2.png');
         if (window.javaApp) window.javaApp.setBloodloot();
     });

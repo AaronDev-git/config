@@ -1,0 +1,17 @@
+{
+  "extfiles": [
+    {
+      "path": "config/myMod.cfg",
+      "downloadURL": "https://example.com/files/myMod.cfg",
+      "sha1": "a3f5c9d5e8b7f2c1d6e7a8b9c0d1e2f3a4b5c6d7",
+      "size": 1024,
+      "update": true
+    },
+    {
+      "path": "resourcepacks/myPack.zip",
+      "downloadURL": "https://example.com/files/myPack.zip",
+      "sha1": "b7e2c1d6a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3",
+      "size": 204800
+    }
+  ]
+}

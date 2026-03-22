@@ -22,6 +22,7 @@ function init() {
     });
 
     document.getElementById('play')?.addEventListener('click', function() {
+        document.getElementById('progressBarContainer').style.display = 'block';
         if (window.javaApp) window.javaApp.startGame();
     });
 

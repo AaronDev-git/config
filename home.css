@@ -226,7 +226,7 @@ body {
 }
 
 #progressBarContainer {
-    width: 180px;
+    width: 140px;
     height: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;

@@ -23,7 +23,6 @@ function init() {
 
     document.getElementById('play')?.addEventListener('click', function() {
         if (window.javaApp) window.javaApp.startGame();
-        document.getElementById('progressBarContainer').style.display = 'block';
     });
 
     document.getElementById('settings')?.addEventListener('click', function() {
@@ -53,17 +52,6 @@ function setAvatar() {
 
 const progressBar = document.getElementById('progressBar');
 
-function updateProgressBar() {
-    if (!window.javaApp) return;
-
-    const a = window.javaApp.getA();
-    const b = window.javaApp.getB();
-
-    if (b > 0) {
-        const percent = (a / b) * 100;
-        progressBar.style.width = percent + '%';
-    }
-}
 
 window.onload = () => {
     init();

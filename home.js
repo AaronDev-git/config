@@ -23,7 +23,7 @@ function init() {
         
         setTimeout(() => {
             cooldown = false;
-        }, 1000);
+        }, 500);
     });
 
     document.getElementById('hardcored')?.addEventListener('click', function() {
@@ -36,7 +36,7 @@ function init() {
 
         setTimeout(() => {
             cooldown = false;
-        }, 1000);
+        }, 500);
     });
 
     document.getElementById('play')?.addEventListener('click', function() {

@@ -15,7 +15,7 @@ function init() {
     let hcooldown = false; 
 
     document.getElementById('vyshaft')?.addEventListener('click', function() {
-        if (vyshaftCooldown) return;
+        if (vcooldown) return;
 
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setVyshaft();

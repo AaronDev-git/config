@@ -19,6 +19,11 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     position: relative;
+
+    user-select: none;        
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none; 
 }
 
 .setting {

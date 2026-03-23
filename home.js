@@ -11,14 +11,33 @@ function init() {
         }, 500);
     }
 
+    let vcooldown = false; 
+    let hcooldown = false; 
+
     document.getElementById('vyshaft')?.addEventListener('click', function() {
+        if (vyshaftCooldown) return;
+
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setVyshaft();
+
+        vcooldown = true;
+        
+        setTimeout(() => {
+            vcooldown = false;
+        }, 500);
     });
 
     document.getElementById('hardcored')?.addEventListener('click', function() {
+        if (hcooldown) return;
+        
         changeBackground('https://aarondev-git.github.io/config/background2.png');
         if (window.javaApp) window.javaApp.setHardcored();
+
+        hcooldown = true;
+
+        setTimeout(() => {
+            hcooldown = false;
+        }, 500);
     });
 
     document.getElementById('play')?.addEventListener('click', function() {

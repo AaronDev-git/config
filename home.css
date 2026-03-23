@@ -9,6 +9,10 @@ body {
     height: 100vh;
     background-color: #1e1e2f;
     color: #fff;
+    user-select: none;        
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none; 
 }
 
 .navbar {

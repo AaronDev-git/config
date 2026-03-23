@@ -45,13 +45,13 @@ function saveRam() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // SAVE BUTTON
     const saveBtn = document.getElementById("save-btn");
     if (saveBtn) {
         saveBtn.addEventListener("click", () => {
             saveRam();
             if (window.javaApp) {
                 window.javaApp.setApp();
+                window.javaApp.setVyshaft();
             }
         });
     }

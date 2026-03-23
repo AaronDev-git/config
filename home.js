@@ -24,7 +24,7 @@ function init() {
         
         setTimeout(() => {
             vcooldown = false;
-        }, 500);
+        }, 1000);
     });
 
     document.getElementById('hardcored')?.addEventListener('click', function() {
@@ -37,7 +37,7 @@ function init() {
 
         setTimeout(() => {
             hcooldown = false;
-        }, 500);
+        }, 1000);
     });
 
     document.getElementById('play')?.addEventListener('click', function() {

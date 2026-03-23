@@ -11,32 +11,31 @@ function init() {
         }, 500);
     }
 
-    let vcooldown = false; 
-    let hcooldown = false; 
+    let cooldown = false; 
 
     document.getElementById('vyshaft')?.addEventListener('click', function() {
-        if (vcooldown) return;
+        if (cooldown) return;
 
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setVyshaft();
 
-        vcooldown = true;
+        cooldown = true;
         
         setTimeout(() => {
-            vcooldown = false;
+            cooldown = false;
         }, 1000);
     });
 
     document.getElementById('hardcored')?.addEventListener('click', function() {
-        if (hcooldown) return;
+        if (cooldown) return;
         
         changeBackground('https://aarondev-git.github.io/config/background2.png');
         if (window.javaApp) window.javaApp.setHardcored();
 
-        hcooldown = true;
+        cooldown = true;
 
         setTimeout(() => {
-            hcooldown = false;
+            cooldown = false;
         }, 1000);
     });
 

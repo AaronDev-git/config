@@ -4,6 +4,19 @@ const optionsContainer = ramSelect.querySelector(".options");
 
 ramSelect.value = "";
 
+function initLowPerf(isActive) {
+    const lowPerfButton = document.getElementById('lowPerfButton');
+    if (!lowPerfButton) return;
+    const icon = lowPerfButton.querySelector('.checkbox-icon');
+    if (isActive) {
+        lowPerfButton.classList.add('active');
+        icon.textContent = '☑';
+    } else {
+        lowPerfButton.classList.remove('active');
+        icon.textContent = '☐';
+    }
+}
+
 selected.addEventListener("click", () => {
     optionsContainer.style.display =
         optionsContainer.style.display === "block" ? "none" : "block";
@@ -77,5 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.javaApp) window.javaApp.setLow();
         });
     }
+
+    
 
 });

@@ -1,7 +1,6 @@
 const ramSelect = document.getElementById("ram-select");
 const selected = ramSelect.querySelector(".selected");
 const optionsContainer = ramSelect.querySelector(".options");
-
 ramSelect.value = "";
 
 function initLowPerf(isActive) {
@@ -30,21 +29,17 @@ document.addEventListener("click", (e) => {
 
 function initRamSelect(currentRam, maxRam) {
     optionsContainer.innerHTML = "";
-
     for (let i = 1; i <= maxRam; i++) {
         const li = document.createElement("li");
         li.setAttribute("data-value", i);
         li.textContent = i + " Go";
-
         li.addEventListener("click", () => {
             selected.textContent = li.textContent;
             ramSelect.value = i;
             optionsContainer.style.display = "none";
         });
-
         optionsContainer.appendChild(li);
     }
-
     selected.textContent = currentRam + " Go";
     ramSelect.value = currentRam;
 }
@@ -57,7 +52,6 @@ function saveRam() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const saveBtn = document.getElementById("save-btn");
     if (saveBtn) {
         saveBtn.addEventListener("click", () => {
@@ -69,28 +63,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    document.getElementById('logout')?.addEventListener('click', function() {
+    // Logout avec modale de confirmation
+    const logoutBtn = document.getElementById('logout');
+    const modal = document.getElementById('logout-modal');
+    const confirmBtn = document.getElementById('confirm-logout');
+    const cancelBtn = document.getElementById('cancel-logout');
+
+    logoutBtn?.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    cancelBtn?.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    confirmBtn?.addEventListener('click', () => {
+        modal.style.display = 'none';
         if (window.javaApp) window.javaApp.logOut();
     });
 
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // Low perf button
     const lowPerfButton = document.getElementById('lowPerfButton');
     if (lowPerfButton) {
         lowPerfButton.addEventListener('click', function () {
-
             this.classList.toggle('active');
-
             const icon = this.querySelector('.checkbox-icon');
-
             if (this.classList.contains('active')) {
                 icon.textContent = '☑';
             } else {
                 icon.textContent = '☐';
             }
-
             if (window.javaApp) window.javaApp.setLow();
         });
     }
-
-    
-
 });

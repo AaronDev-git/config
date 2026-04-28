@@ -22,7 +22,19 @@
 
 <button id="save-btn">Enregistrer</button>
 <button id="logout" class="icon-button">
-    <img src="https://aarondev-git.github.io/config/logout.png" alt="Bloodloot">
+    Déconnexion
 </button>
+
+<div id="logout-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+        <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
+        <div class="modal-actions">
+            <button id="confirm-logout">Oui</button>
+            <button id="cancel-logout">Non</button>
+        </div>
+    </div>
+</div>
 <script src="https://aarondev-git.github.io/config/settings.js"></script>
 <link rel="stylesheet" href="https://aarondev-git.github.io/config/settings.css">
+
+

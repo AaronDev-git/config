@@ -9,6 +9,20 @@ function init() {
             current.style.backgroundImage = `url("${url}")`;
             next.style.opacity = 0;
         }, 500);
+
+        const playBtn = document.getElementById('play');
+        const log = document.getElementById('downloadLog');
+        if (url.includes('background2')) {
+            playBtn.disabled = true;
+            playBtn.style.opacity = '0.4';
+            playBtn.style.cursor = 'not-allowed';
+            log.textContent = "Prochainement ...";
+        } else {
+            playBtn.disabled = false;
+            playBtn.style.opacity = '1';
+            playBtn.style.cursor = 'pointer';
+            log.textContent = "";
+        }
     }
 
     let navbarLocked = false;

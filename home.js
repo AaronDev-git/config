@@ -11,10 +11,16 @@ function init() {
         }, 500);
     }
 
+    let navbarLocked = false;
+
+    window.setNavbarLocked = function(locked) {
+        navbarLocked = locked;
+    };
+
     let cooldown = false; 
 
     document.getElementById('vyshaft')?.addEventListener('click', function() {
-        if (cooldown) return;
+        if (cooldown || navbarLocked) return;
 
         changeBackground('https://aarondev-git.github.io/config/background.png');
         if (window.javaApp) window.javaApp.setVyshaft();
@@ -27,7 +33,7 @@ function init() {
     });
 
     document.getElementById('hardcored')?.addEventListener('click', function() {
-        if (cooldown) return;
+        if (cooldown || navbarLocked) return;
         
         changeBackground('https://aarondev-git.github.io/config/background2.png');
         if (window.javaApp) window.javaApp.setHardcored();
@@ -40,18 +46,22 @@ function init() {
     });
 
     document.getElementById('play')?.addEventListener('click', function() {
+        if (navbarLocked) return;
         if (window.javaApp) window.javaApp.startGame();
     });
 
     document.getElementById('settings')?.addEventListener('click', function() {
+        if (navbarLocked) return;
         if (window.javaApp) window.javaApp.setSettings();
     });
 
     document.getElementById('shop')?.addEventListener('click', function() {
+        if (navbarLocked) return;
         if (window.javaApp) window.javaApp.openShop();
     });
 
     document.getElementById('minestrator')?.addEventListener('click', function() {
+        if (navbarLocked) return;
             if (window.javaApp) window.javaApp.openMineStrator();
         });
 

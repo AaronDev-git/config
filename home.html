@@ -4,35 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="https://aarondev-git.github.io/config/home.css">
-    <script src="https://aarondev-git.github.io/config/home.js" defer></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/home.js" defer></script>
 </head>
 <body>
     <div class="navbar">
         <div class="avatar-container">
-            <img id="userAvatar" src="https://minotar.net/avatar/MHF_Steve.png" alt="Avatar" draggable="false">
+            <img id="userAvatar" src="https://minotar.net/avatar/MHF_Steve.png" alt="Avatar">
         </div>
         <div class="middle-buttons">
             <div class="top-buttons">
                 <div class="separator"></div>
-                <button id="vyshaft" class="icon-button">
-                    <img src="https://aarondev-git.github.io/config/servers.png" alt="Vyshaft" draggable="false">
+                <button id="mineloot" class="icon-button">
+                    <img src="https://aarondev-git.github.io/config/servers.png" alt="Mineloot">
                 </button>
                 <div class="separator"></div>
-                <button id="hardcored" class="icon-button">
-                    <img src="https://aarondev-git.github.io/config/icon.png" alt="Hardcored" draggable="false">
+                <button id="bloodloot" class="icon-button">
+                    <img src="https://aarondev-git.github.io/config/icon.png" alt="Bloodloot">
                 </button>
-                
             </div>
             <div class="bottom-button">
                 <button id="minestrator" class="icon-button">
-                    <img src="https://aarondev-git.github.io/config/minestrator.png" alt="hardcored" draggable="false">
-                </button>
-                <button id="shop" class="icon-button">
-                    <img src="https://aarondev-git.github.io/config/web.png" alt="hardcored" draggable="false">
+                    <img src="https://aarondev-git.github.io/config/minestrator.png" alt="Bloodloot">
                 </button>
                 <button id="settings" class="icon-button">
-                    <img src="https://aarondev-git.github.io/config/settings.png" alt="hardcored" draggable="false">
+                    <img src="https://aarondev-git.github.io/config/settings.png" alt="Bloodloot">
                 </button>
             </div>
         </div>
@@ -41,15 +37,20 @@
         <div class="bg current" style="background-image: url('https://aarondev-git.github.io/config/background.png');"></div>
         <div class="bg next"></div>
         <div id="playContainer">
-            <div id="downloadLog"></div>
             <div id="progressBarContainer">
                 <div id="progressBar"></div>
             </div>
-            
-            <button id="play" class="play-button">
-                <span class="play-img play-base"></span>
-                <span class="play-img play-top"></span>
-            </button>
+
+            <div id="playButtons">
+                <button id="play" class="play-button">
+                    <span class="play-img play-base"></span>
+                    <span class="play-img play-top"></span>
+                </button>
+
+                <button id="shop" class="icon-button">
+                    <img src="https://aarondev-git.github.io/config/web.png" alt="Shop">
+                </button>
+            </div>
         </div>
     </div>
 </body>

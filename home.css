@@ -277,9 +277,7 @@ body {
     text-overflow: ellipsis;
     max-width: 300px;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(40%);
+    transform: translateX(-50px);
 }
 
 
